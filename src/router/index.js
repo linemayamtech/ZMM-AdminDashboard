@@ -5,7 +5,7 @@ import App from '../App';
 // import Home from '../components/Home';
 import Dashboard from '../pages/Dashboard';
 import WebsiteSettings from '../pages/websiteSetting/WebsiteSettings';
-import Buyer from '../pages/Buyer';
+import Buyer from '../pages/Buyer/Buyer';
 import ProductSellers from '../pages/ProductSellers';
 import Osp from '../pages/Osp';
 import Products from '../pages/Products';

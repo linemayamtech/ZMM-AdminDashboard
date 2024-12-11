@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaLock } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
+import { CiLock } from "react-icons/ci";
+import { IoMailOpenOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 
 const AdminLogin = () => {
@@ -33,13 +33,13 @@ const AdminLogin = () => {
   return (
     <>
       <div className="background w-full h-[100vh] flex items-center ">
-        <div className="flex justify-center mx-auto w-3/4 h-[77vh] rounded-xl ">
+        <div className="flex justify-center mx-auto w-3/4 h-[70vh] rounded-xl ">
           <div className="bgimg w-1/2 rounded-s-2xl">
             <div className="h-full flex flex-col items-center justify-center gap-5 px-20 ">
-              <h1 className="text-white text-4xl">
+              <h1 className="text-white font-semibold text-3xl">
                 Welcome to <span className="text-[#ff0000]">ZeroMiddleMan</span> Admin Dashboard
               </h1>
-              <p className="text-white ">
+              <p className="text-white text-base ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
                 Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -49,12 +49,12 @@ const AdminLogin = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white w-1/2 p-5 px-7 rounded-e-2xl">
+          <div className="bg-white flex flex-col justify-center w-1/2 p-5 px-7 rounded-e-2xl">
             <div className="flex justify-center">
-              <img src={require("../assets/logo.png")} alt="" />
+              <img src={require("../assets/logo.png")} alt="" className="w-[20%]" />
             </div>
             <div className="mb-5">
-              <h1 className="text-[#ff0000] text-xl font-semibold text-center">
+              <h1 className="text-[#ff0000] text-[130%] font-semibold text-center">
                 ADMIN LOGIN
               </h1>
             </div>
@@ -63,9 +63,10 @@ const AdminLogin = () => {
               <div className="flex flex-col">
                 <div className="px-2 flex items-center gap-2">
                   <span className="text-2xl">
-                    <IoIosMail />
+                  <IoMailOpenOutline />
+
                   </span>
-                  <label className="text-xl" htmlFor="email">
+                  <label className="text-[110%]" htmlFor="email">
                     Mail Id
                   </label>
                 </div>
@@ -84,11 +85,11 @@ const AdminLogin = () => {
 
               {/* Password Field */}
               <div className="flex flex-col">
-                <div className="px-2 flex items-center gap-2">
-                  <span className="text-xl">
-                    <FaLock />
+                <div className="px-2 flex items-center gap-1">
+                  <span className="text-2xl font-semibold">
+                  <CiLock />
                   </span>
-                  <label className="text-xl" htmlFor="password">
+                  <label className="text-[110%]" htmlFor="password">
                     Password
                   </label>
                 </div>
@@ -100,16 +101,17 @@ const AdminLogin = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <div className="flex justify-between">
+                <div className=" inline-flex ">
                   {errors.password && (
-                    <p className=" text-red-500 text-sm mt-1">
+                    <p className=" text-red-500 text-sm mt-1 inline-flex">
                       {errors.password}
                     </p>
                   )}
-                  <p className="text-blue-500 text-sm underline text-end ">
+                 
+                </div>
+                <p className="text-blue-500 text-sm underline inline text-end ">
                     Forget Password?
                   </p>
-                </div>
               </div>
             </div>
 

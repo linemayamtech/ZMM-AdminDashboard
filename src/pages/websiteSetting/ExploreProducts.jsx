@@ -5,6 +5,7 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 
 const ExploreProducts = () => {
   const [selectedCards, setSelectedCards] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   const cardsData = [
     {
@@ -136,10 +137,12 @@ const ExploreProducts = () => {
       // Add card only if fewer than 4 are selected
       setSelectedCards((prevSelected) => [...prevSelected, id]);
     } else {
-      alert("You can select a maximum of 4 cards.");
+      setShowPopup(true); // Show the popup when the limit is reached
     }
   };
-
+  const closePopup = () => {
+    setShowPopup(false); // Close the popup
+  };
   // Default to the first four cards if no cards are selected
   const displayedCards =
     selectedCards.length > 0
@@ -419,6 +422,21 @@ const ExploreProducts = () => {
                 ))}
               </tbody>
             </table>
+
+             {/* Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-xl shadow-lg p-16 text-center">
+            <p className="text-gray-700 mb-4">You can select a maximum of 4 cards.</p>
+            <button
+              onClick={closePopup}
+              className="hover:bg-oceanBlue hover:text-white px-6 py-1 font-semibold rounded-md border-2 border-oceanBlue text-oceanBlue"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
           </div>
         </div>
       </div>

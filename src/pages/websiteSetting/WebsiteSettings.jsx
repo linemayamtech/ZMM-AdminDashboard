@@ -3,12 +3,7 @@ import { FaArrowCircleLeft, FaArrowCircleRight, FaRegEdit, FaTrashAlt} from "rea
 import { useNavigate } from "react-router-dom";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { IoMdAddCircleOutline } from "react-icons/io";
-
 import "../../../src/App.css"
-
-
-
-
 
 const WebsiteSettings = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +11,6 @@ const WebsiteSettings = () => {
   const [visibleEditIndex, setVisibleEditIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editedItem, setEditedItem] = useState(null); // To track changes made in the modal
-
 
   const [carouselImages, setCarouselImages] = useState([
     require("../../assets/carouselImages/card1.png"),
