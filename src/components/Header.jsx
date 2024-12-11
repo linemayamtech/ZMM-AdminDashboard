@@ -117,13 +117,13 @@ const Header = () => {
                 <p>+1 222-555-33-99</p>
               </div>
               <div className="flex gap-5">
-                <button className="bg-blood-gradient text-white p-2 px-5 hover:bg-[#ff0000] rounded-full">
+                <button className="bg-gradient-to-r from-[#D0236C] via-[#D0236C] to-[#6A1237] text-white p-2 px-5 hover:bg-[#ff0000] rounded-md">
                   Listing Service Dashboard
                 </button>
-                <button className="bg-blood-gradient text-white p-2 px-5 hover:bg-[#ff0000] rounded-full">
+                <button className="bg-gradient-to-r from-[#D0236C] via-[#D0236C] to-[#6A1237] text-white p-2 px-5 hover:bg-[#ff0000] rounded-md">
                   Liaison Service Dashboard
                 </button>
-                <button className="bg-blood-gradient text-white p-2 px-5 hover:bg-[#ff0000] rounded-full">
+                <button className="bg-gradient-to-r from-[#D0236C] via-[#D0236C] to-[#6A1237] text-white p-2 px-5 hover:bg-[#ff0000] rounded-md">
                   Directory Service Dashboard
                 </button>
               </div>

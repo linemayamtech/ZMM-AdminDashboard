@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -37,7 +39,7 @@ module.exports = {
         'blood3':'#990000',
         'blood4':'linear-gradient(90deg, #ff0000, #CC0000, #990000)',
          'oceanBlue':'#0C92CC'
-        
+            
       },
       backgroundImage: {
         'blood-gradient': 'linear-gradient(90deg, #ff0000, #CC0000, #990000)',
@@ -45,6 +47,18 @@ module.exports = {
       
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".option-hover": {
+          "& option:hover": {
+            backgroundColor: "#ff0000", // Set your desired hover background color
+            color: "#ffffff",          // Set your desired hover text color
+          },
+        },
+      });
+    }),
+  ],
 }
 

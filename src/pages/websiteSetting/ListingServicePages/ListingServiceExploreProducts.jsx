@@ -174,10 +174,12 @@ const ListingServiceExploreProducts = () => {
             onChange={handleNavigation}
           >
             <option value="/admindashboard/listingexplore">
-            Explore Products with High Demand / Hot Enquiries
-          </option>
-            <option value="/admindashboard/banner">Banners</option>
-           <option value="/admindashboard/lisitngproducts">Trending Products</option>
+              Explore Products with High Demand / Hot Enquiries
+            </option>
+             <option className="option-hover " value="/admindashboard/banner">Banners</option>
+             <option value="/admindashboard/lisitngproducts">Trending Products</option>
+           
+            
          
           
           </select>
@@ -194,7 +196,7 @@ const ListingServiceExploreProducts = () => {
             </span>
           </div>
             <h1 className="text-3xl  py-5 text-center font-semibold">
-               Explore Products with High Demand / Hot Enquiries
+               Listing Explore Products with High Demand / Hot Enquiries
             </h1>
           </div>
           {/* Cards Section */}

@@ -33,7 +33,7 @@ const AdminLogin = () => {
   return (
     <>
       <div className="background w-full h-[100vh] flex items-center ">
-        <div className="flex justify-center mx-auto w-3/4 h-[72vh] rounded-xl ">
+        <div className="flex justify-center mx-auto w-3/4 h-[77vh] rounded-xl ">
           <div className="bgimg w-1/2 rounded-s-2xl">
             <div className="h-full flex flex-col items-center justify-center gap-5 px-20 ">
               <h1 className="text-white text-4xl">

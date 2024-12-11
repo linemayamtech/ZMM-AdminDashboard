@@ -18,6 +18,12 @@
   /* width: 50%; */
 
 }
+
+select option:hover {
+  background-color: #ff0000; /* Change to desired hover color */
+  color: #ffffff;           /* Optional: Change text color */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
